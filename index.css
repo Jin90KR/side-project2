@@ -49,26 +49,28 @@ li{
     font-size: 1.2rem;
 }
 
-.survey{
+.surveycontainer{
     position: absolute;
     top: 100px;
     width: 100%;
     height: 100%;
     padding: 10px 20px;
+    gap: 50px;
+    
 }
 
 .petphoto{
     position: absolute;
-    top: 30%;
+    top: 20%;
     width: 50%;
     right: 0;
-    border-top-left-radius: 40px 40px;;
+    border-top-left-radius: 40px 40px;
 }
 
 .servey{
     position: absolute;
-    top: 50%;
-    left: 10%;
+    width: 50%;
+    top: 40%;
     font-size: 2rem;
     text-align: center;
 }
@@ -85,4 +87,83 @@ li{
     border-style: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.show-main{
+    display: none;
+}
+
+.surveypage{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+
+.question1,
+.question2,
+.question3{
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.answer1,
+.answer2,
+.answer3 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer1 button,
+.answer2 button,
+.answer3 button{
+    width: 60%;
+    max-width: 500px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: bisque;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.answer button:hover{
+    background-color: rgb(240, 190, 129);
+}
+
+@media (max-width: 1000px){
+    .surveycontainer{
+        display: flex;
+        flex-direction: row;
+   
+    }
+    .petphoto{
+        position: absolute;
+        width: 500px;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, -50%);
+    
+    }
+
+    .servey{
+        font-size: 2rem;
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+       
+    }
+
+    .show-main{
+        display: none;
+    }
 }
